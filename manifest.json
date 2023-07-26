@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Twitter Classic",
+    "version": "1.0",
+    "description": "Twitter Classic is a Chrome extension that brings back the classic Twitter logo",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon16.png",
+            "48": "icon48.png",
+            "128": "icon128.png"
+        }
+    },
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://twitter.com/*"
+            ],
+            "css": [
+                "styles.css"
+            ],
+            "js": [
+                "contentScript.js"
+            ],
+            "run_at": "document_start"
+        }
+    ]
+}
