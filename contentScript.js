@@ -15,6 +15,10 @@ function replaceTitle() {
       // Remove the " / X" suffix
       document.title = document.title.replace(" / X", "");
   }
+  // if the title is just "X", replace it with "Twitter"
+  else if (document.title === "X") {
+      document.title = "Twitter";
+  }
 }
 
 function replaceLogo() {
